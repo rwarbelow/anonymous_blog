@@ -1,0 +1,14 @@
+<% if @errors %>
+<% @errors.each do |error| %>
+<li> <%= error %></li>
+<% end %>
+<% end %>
+
+
+<form action="/new_post" method="post">
+  <input type="text" name="post[title]" placeholder="post title">
+  <textarea name="post[body]" cols="60" rows="10" placeholder="type your post here"></textarea>
+  <input type="text" name="tags" placeholder="tags">
+  <input type="submit" value="submit">
+</form>
+

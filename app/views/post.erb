@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <td><h2><%= @post.title %></h2></td>
+  </tr>
+  <tr>
+    <td><%= @post.body %></td>
+  </tr>
+  <tr>
+    <td>
+      <% @post.tags.each do |tag| %>
+      <tr><td>Tags: <a href="/tags/<%= tag.tag_description %>/posts"><%= tag.tag_description %></a></td></tr>
+      <% end %>
+    </td>
+  </tr>
+  
+</table>
